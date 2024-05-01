@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:06:28 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/29 17:08:22 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/02 03:29:24 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write(fd, "\n", 2);
+	write(fd, "\n", 1);
 }

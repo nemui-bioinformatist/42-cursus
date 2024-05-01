@@ -6,32 +6,18 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:50:55 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/29 16:47:53 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/02 03:24:58 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (*str != '\0')
-	{
-		len++;
-		str++;
-	}
-	return (len);
-}
-*/
 int	count_split(char const *s, char c)
 {
 	int	index;
 	int	count;
 
-	index = 1;
+	index = 0;
 	count = 0;
 	while (*s)
 	{
@@ -42,6 +28,7 @@ int	count_split(char const *s, char c)
 			count++;
 			index = 1;
 		}
+		s++;
 	}
 	return (count);
 }
@@ -71,7 +58,7 @@ size_t	count_len(char const *s, char c)
 
 	i = 0;
 	len = 0;
-	while (s[i] != c)
+	while (s[i] && s[i] != c)
 	{
 		len++;
 		i++;
@@ -99,7 +86,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < count)
 	{
-		while (*s == c)
+		while (*s && *s == c)
 			s++;
 		arr[i++] = split_dup(s, count_len(s, c));
 		if (!arr[i - 1])

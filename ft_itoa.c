@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:24:49 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/02 00:15:53 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/02 04:12:52 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,26 +56,27 @@ char	*ft_itoa(int n)
 	}
 	count += count_digit(num);
 	arr = (char *)malloc((count + 1) * sizeof(char));
-	if (arr != NULL)
-		getDigitsToArray(arr, count, sign, num);
+	if (!arr)
+		return (NULL);
+	getdigitstoarray(arr, count, sign, num);
 	return (arr);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
 	int num1, num2;
 	char *str1, *str2;
-	num1 = -1234;
-	num2 = 12345;
-	str1 = ft_itoa(num1);
-	str2 = ft_itoa(num2);
-	printf("%s\n", str1);
-	printf("%s\n", str2);
+	//num1 = -1234;
+	//num2 = 12345;
+	//str1 = ft_itoa(num1);
+	//str2 = ft_itoa(num2);
+	//printf("%s\n", str1);
+	//printf("%s\n", str2);
 	// 使用後にメモリを解放
-	free(str1);
-	free(str2);
+	//free(str1);
+	//free(str2);
+	printf("%zu", count_digit(num2));
 	return (0);
 }
-*/
