@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:24:49 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/02 04:27:36 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/02 05:24:03 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	count_digit(long num)
 	size_t	count;
 
 	count = 0;
+	if (num == 0)
+		return(1);
 	while (num > 0)
 	{
 		num = (num - num % 10) / 10;
@@ -28,13 +30,12 @@ size_t	count_digit(long num)
 void	getdigitstoarray(char *arr, size_t count, size_t sign, long num)
 {
 	arr[count] = '\0';
-	count -= 1;
-	while (0 + sign <= count)
+	while (sign  < count)
 	{
-		arr[count--] = num % 10 + '0';
+		arr[--count] = num % 10 + '0';
 		num = (num - num % 10) / 10;
 	}
-	if (sign)
+	if (sign == 1)
 		arr[0] = '-';
 }
 
@@ -68,11 +69,11 @@ int	main(void)
 {
 	int num1, num2;
 	char *str1, *str2;
-	//num1 = -1234;
+	num1 = -1234;
 	num2 = 12345;
-	//str1 = ft_itoa(num1);
+	str1 = ft_itoa(num1);
 	str2 = ft_itoa(num2);
-	//printf("%s\n", str1);
+	printf("%s\n", str1);
 	printf("%s\n", str2);
     // 使用後にメモリを解放
 	//free(str1);
