@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:24:49 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/02 04:12:52 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/02 04:27:36 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ int	main(void)
 	int num1, num2;
 	char *str1, *str2;
 	//num1 = -1234;
-	//num2 = 12345;
+	num2 = 12345;
 	//str1 = ft_itoa(num1);
-	//str2 = ft_itoa(num2);
+	str2 = ft_itoa(num2);
 	//printf("%s\n", str1);
-	//printf("%s\n", str2);
-	// 使用後にメモリを解放
+	printf("%s\n", str2);
+    // 使用後にメモリを解放
 	//free(str1);
 	//free(str2);
 	printf("%zu", count_digit(num2));
