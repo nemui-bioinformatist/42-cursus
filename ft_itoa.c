@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:24:49 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/02 05:24:03 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/04 01:18:16 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	count_digit(long num)
 
 	count = 0;
 	if (num == 0)
-		return(1);
+		return (1);
 	while (num > 0)
 	{
 		num = (num - num % 10) / 10;
@@ -30,7 +30,7 @@ size_t	count_digit(long num)
 void	getdigitstoarray(char *arr, size_t count, size_t sign, long num)
 {
 	arr[count] = '\0';
-	while (sign  < count)
+	while (sign < count)
 	{
 		arr[--count] = num % 10 + '0';
 		num = (num - num % 10) / 10;
@@ -41,7 +41,7 @@ void	getdigitstoarray(char *arr, size_t count, size_t sign, long num)
 
 char	*ft_itoa(int n)
 {
-	size_t		sign;
+	size_t	sign;
 	size_t	count;
 	long	num;
 	char	*arr;
@@ -62,7 +62,7 @@ char	*ft_itoa(int n)
 	getdigitstoarray(arr, count, sign, num);
 	return (arr);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -75,9 +75,9 @@ int	main(void)
 	str2 = ft_itoa(num2);
 	printf("%s\n", str1);
 	printf("%s\n", str2);
-    // 使用後にメモリを解放
+	// 使用後にメモリを解放
 	//free(str1);
 	//free(str2);
 	printf("%zu", count_digit(num2));
 	return (0);
-}
+}*/

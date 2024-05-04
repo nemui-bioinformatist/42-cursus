@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:14:53 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/29 17:34:44 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/04 01:48:37 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	start(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (s1[i])
@@ -37,8 +37,8 @@ int	start(char const *s1, char const *s2)
 
 int	end(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	i = ft_strlen(s1) - 1;
 	j = 0;
@@ -61,8 +61,8 @@ int	end(char const *s1, char const *s2)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	int		j;
 	size_t	k;
 	char	*arr;
 

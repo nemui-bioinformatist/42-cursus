@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:09:24 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/29 18:23:08 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/04 01:45:04 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *arr;
+	char	*arr;
 
 	arr = ft_itoa(n);
 	ft_putstr_fd(arr, fd);

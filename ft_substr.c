@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:06:33 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/29 17:00:17 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/04 00:46:14 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < start + len)
 		len = ft_strlen(s) - start;
 	arr = (char *)malloc((len + 1) * sizeof(char));
-	if (arr != '\0')
+	if (arr != NULL)
 	{
 		while (len--)
 		{
