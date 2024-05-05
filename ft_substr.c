@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 22:06:33 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/04 00:46:14 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/04 15:31:15 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/05 17:21:40 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*arr;
-	int		i;
+	char			*arr;
+	unsigned int	i;
+	unsigned int	index;
 
 	i = 0;
-	if (len == 0 && ft_strlen(s) <= start)
-		return (ft_strdup(" "));
-	if (ft_strlen(s) < start + len)
-		len = ft_strlen(s) - start;
-	arr = (char *)malloc((len + 1) * sizeof(char));
+	if (len == 0 || ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	if (ft_strlen(s) <= start + len - 1)
+		index = ft_strlen(s) - 1;
+	else
+		index = start + len - 1;
+	arr = (char *)malloc((index - start + 1 + 1) * sizeof(char));
 	if (arr != NULL)
 	{
-		while (len--)
+		while (i + start <= index)
 		{
 			arr[i] = s[start + i];
 			i++;

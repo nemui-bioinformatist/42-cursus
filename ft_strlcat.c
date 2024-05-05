@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 23:34:43 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/04 02:04:49 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/04 11:12:09 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/04 11:58:45 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	dst_len;
+	size_t	src_len;
 	size_t	i;
 
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	i = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	else if (ft_strlen(dst) < dstsize)
+	if (!dst && !dstsize)
+		return (dstsize + src_len);
+	if (dst_len >= dstsize)
+		return (dstsize + src_len);
+	while (i < dstsize - dst_len - 1 && src[i])
 	{
-		while (src[i] != '\0' && i <= dstsize - ft_strlen(dst) - 1)
-		{
-			dst[ft_strlen(dst) + i] = src[i];
-			i++;
-		}
-		dst[ft_strlen(dst) + i] = '\0';
-		return (ft_strlen(dst) + ft_strlen(src) - i);
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	else
-		return (ft_strlen(dst) + dstsize);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

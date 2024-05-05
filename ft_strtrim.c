@@ -6,13 +6,13 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:14:53 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/04 01:48:37 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/05 18:33:54 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	start(char const *s1, char const *s2)
+static int	start(char const *s1, char const *s2)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ int	start(char const *s1, char const *s2)
 	return (i);
 }
 
-int	end(char const *s1, char const *s2)
+static int	end(char const *s1, char const *s2)
 {
 	int	i;
 	int	j;
