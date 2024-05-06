@@ -6,13 +6,13 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:14:53 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/05 18:33:54 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/05 18:45:26 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	start(char const *s1, char const *s2)
+static int	ft_start(char const *s1, char const *s2)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ static int	start(char const *s1, char const *s2)
 	return (i);
 }
 
-static int	end(char const *s1, char const *s2)
+static int	ft_end(char const *s1, char const *s2)
 {
 	int	i;
 	int	j;
@@ -66,8 +66,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	k;
 	char	*arr;
 
-	i = start(s1, set);
-	j = end(s1, set);
+	i = ft_start(s1, set);
+	j = ft_end(s1, set);
 	k = 0;
 	arr = (char *)malloc((j - i + 1 + 1) * sizeof(char));
 	if (arr != NULL)
