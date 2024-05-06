@@ -6,7 +6,7 @@
 /*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:30:31 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/01 23:30:45 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/06 17:36:13 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	memo_dst = (char *)dst;
 	memo_src = (const char *)src;
+	if (dst == src)
+		return (dst);
 	i = 0;
 	while (n--)
 	{
