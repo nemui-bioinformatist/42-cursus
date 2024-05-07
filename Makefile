@@ -35,6 +35,7 @@ SRCS  = ft_isalnum.c\
 		ft_tolower.c\
 		ft_toupper.c\
 		ft_itoa.c\
+		ft_putnbr_fd.c
 		
 OBJS  = $(SRCS:.c=.o)
 CC    = cc
