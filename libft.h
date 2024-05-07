@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:11:14 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/07 20:32:17 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/07 23:20:46 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,5 @@ char	*ft_itoa(int n);
 size_t	count_digit(long num);
 void	getDigitsToArray(char *arr, size_t count, int sign, long num);
 void    ft_putnbr_fd(int n, int fd);
+int ft_atoi(const char *str);
 #endif // LIBFT_H
