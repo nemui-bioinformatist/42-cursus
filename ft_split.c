@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 21:50:55 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/08 15:06:00 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/08 23:58:59 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/08 23:59:19 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static size_t	count_len(char const *s, char c)
 
 static void	ft_free(char **arr, int index)
 {
-	while (index >= 0)
+	while (index > 0)
 		free(arr[--index]);
 	free(arr);
 }
@@ -99,22 +99,3 @@ char	**ft_split(char const *s, char c)
 	arr[i] = NULL;
 	return (arr);
 }
-/*
-int	main(void)
-{
-	char const	*s1;
-	char		c;
-	char const	*s2;
-	char const	*s3;
-
-	s1 = "aaaBBbbnBc";
-	c = 'B';
-	printf("%d\n", count_split(s1, c)); //3
-	s2 = "aaBBBcBB";
-	printf("%d\n", count_split(s2, c)); //2
-	s3 = "    BBBaaaaBggB  BBa";
-	printf("%d\n", count_split(s3, c)); //2
-	for (int i = 0; i < 3; i++)
-		printf("%s\n", ft_split(s1, c)[i]); //aaa,bbn,c
-}
-*/
