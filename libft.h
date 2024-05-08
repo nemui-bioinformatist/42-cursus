@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 18:11:14 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/08 15:05:10 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/08 17:16:07 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ size_t	ft_strlen(const char *str);
 void	*ft_memset(void *buf, int ch, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_strcat(char *dest, char const *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);

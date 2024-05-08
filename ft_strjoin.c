@@ -6,13 +6,13 @@
 /*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:16:28 by rnomura           #+#    #+#             */
-/*   Updated: 2024/04/28 22:22:33 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/08 17:14:46 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char const *src)
+static char	*ft_strcat(char *dest, char const *src)
 {
 	int	i;
 
