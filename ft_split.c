@@ -6,13 +6,13 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 21:50:55 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/02 03:24:58 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/08 15:06:00 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_split(char const *s, char c)
+static int	count_split(char const *s, char c)
 {
 	int	index;
 	int	count;
@@ -33,7 +33,7 @@ int	count_split(char const *s, char c)
 	return (count);
 }
 
-char	*split_dup(char const *s, size_t len)
+static char	*split_dup(char const *s, size_t len)
 {
 	char	*mini_arr;
 	size_t	i;
@@ -51,7 +51,7 @@ char	*split_dup(char const *s, size_t len)
 	return (mini_arr);
 }
 
-size_t	count_len(char const *s, char c)
+static size_t	count_len(char const *s, char c)
 {
 	size_t	len;
 	size_t	i;
@@ -66,7 +66,7 @@ size_t	count_len(char const *s, char c)
 	return (len);
 }
 
-void	ft_free(char **arr, int index)
+static void	ft_free(char **arr, int index)
 {
 	while (index >= 0)
 		free(arr[--index]);

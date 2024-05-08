@@ -6,13 +6,13 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:24:49 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/04 01:18:16 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/08 15:00:58 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_digit(long num)
+static size_t	count_digit(long num)
 {
 	size_t	count;
 
@@ -27,7 +27,7 @@ size_t	count_digit(long num)
 	return (count);
 }
 
-void	getdigitstoarray(char *arr, size_t count, size_t sign, long num)
+static void	getdigitstoarray(char *arr, size_t count, size_t sign, long num)
 {
 	arr[count] = '\0';
 	while (sign < count)
