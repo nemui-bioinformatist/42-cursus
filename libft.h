@@ -57,6 +57,6 @@ int		ft_toupper(int c);
 char	*ft_itoa(int n);
 size_t	count_digit(long num);
 void	getDigitsToArray(char *arr, size_t count, int sign, long num);
-void    ft_putnbr_fd(int n, int fd);
-int ft_atoi(const char *str);
+void	ft_putnbr_fd(int n, int fd);
+int		ft_atoi(const char *str);
 #endif // LIBFT_H
