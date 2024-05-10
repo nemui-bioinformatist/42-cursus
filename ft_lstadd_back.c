@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 01:41:03 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/11 03:30:31 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/11 04:53:18 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/11 05:12:26 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
+	t_list	*last_node;
 
-	tmp = (t_list *)malloc(sizeof(t_list));
-	if (!tmp)
-		return (NULL);
-	tmp->content = content;
-	tmp->next = NULL;
-	return (tmp);
+	if (!lst || !new)
+		return ;
+	if (*lst)
+	{
+		last_node = ft_lstlast(*lst);
+		last_node->next = new;
+	}
+	else
+		*lst = new;
 }

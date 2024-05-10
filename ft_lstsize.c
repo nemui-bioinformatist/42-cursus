@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 01:41:03 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/11 03:30:31 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/11 03:51:07 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/11 04:22:52 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*tmp;
+	int	count;
 
-	tmp = (t_list *)malloc(sizeof(t_list));
-	if (!tmp)
-		return (NULL);
-	tmp->content = content;
-	tmp->next = NULL;
-	return (tmp);
+	count = 0;
+	while (lst != NULL)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
