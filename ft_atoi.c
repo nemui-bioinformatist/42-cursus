@@ -3,16 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 20:53:07 by rnomura           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/05/11 02:22:34 by rnomura          ###   ########.fr       */
-=======
-/*   Updated: 2024/05/08 14:56:20 by rnomura          ###   ########.fr       */
->>>>>>> 4499a6c719ba98ac8de188a8d1c536fbeed16144
+/*   Created: 2024/05/11 02:37:18 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/11 02:37:29 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	isspace(int c)
