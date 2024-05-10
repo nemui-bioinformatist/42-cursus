@@ -37,10 +37,18 @@ SRCS  = ft_isalnum.c\
 		ft_itoa.c\
 		ft_putnbr_fd.c\
 		ft_atoi.c
-		
+
+BONUS_SRCS = ft_lstnew.c\
+
 OBJS  = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 CC    = cc
 CFLAG = -Wall -Wextra -Werror
+
+ifdef BONUS_FLAG
+	OBJS += $(BONUS_OBJS)
+endif
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
@@ -55,3 +63,6 @@ fclean: clean
 	rm -f $(NAME)
 re:
 	fclean all
+bonus:
+	make BONUS_FLAG=1
+.PHONY : all bonus clean fclean re
