@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:09:24 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/07 20:51:21 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/12 11:03:14 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	num;
+	long long	num;
 
 	num = n;
 	if (num < 0)
