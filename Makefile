@@ -69,8 +69,7 @@ clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
 fclean: clean
 	rm -f $(NAME)
-re:
-	fclean all
+re: fclean all
 bonus:
 	make BONUS_FLAG=1
 .PHONY : all bonus clean fclean re
