@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 15:31:15 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/05 17:21:40 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/17 23:15:09 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	index;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (len == 0 || ft_strlen(s) <= start)
 		return (ft_strdup(""));
 	if (ft_strlen(s) <= start + len - 1)

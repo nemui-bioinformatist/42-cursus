@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 23:58:59 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/08 23:59:19 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/17 23:18:12 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	count = count_split(s, c);
 	arr = (char **)malloc((count + 1) * sizeof(char *));
 	if (!arr)

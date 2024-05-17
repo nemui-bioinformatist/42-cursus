@@ -6,7 +6,7 @@
 /*   By: rnomura <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 22:16:28 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/08 17:14:46 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/17 23:16:26 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*arr;
 
+	if (!s1 || !s2)
+		return (NULL);
 	arr = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (arr != NULL)
 	{

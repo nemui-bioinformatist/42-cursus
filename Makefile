@@ -70,6 +70,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
+#so:
+#	gcc -shared -o libft.so *.o
 bonus:
 	make BONUS_FLAG=1
 .PHONY : all bonus clean fclean re
