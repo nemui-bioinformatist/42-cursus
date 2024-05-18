@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 02:32:25 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/17 22:30:44 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/18 09:40:18 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
